@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-commerce Product Page</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500&family=Kumbh+Sans:wght@500&family=Montserrat+Alternates:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="curtain"></div>
+      <header class="header">
+        <div class="header-group-1">
+          <img
+            src="images/icon-menu.svg"
+            alt="open navigation menu"
+            class="menu open"
+          />
+          <img src="images/logo.svg" alt="sneakers logo" class="logo" />
+
+          <nav class="navbar">
+            <img
+              src="images/icon-close.svg"
+              alt="close navigation menu"
+              class="menu close"
+            />
+            <ul>
+              <li class="nav-link"><a href="#"> Collections </a></li>
+              <li class="nav-link"><a href="#"> Men </a></li>
+              <li class="nav-link"><a href="#"> Women </a></li>
+              <li class="nav-link"><a href="#"> About </a></li>
+              <li class="nav-link"><a href="#"> Contact </a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="header-group-2">
+          <img src="images/icon-cart.svg" alt="shopping cart" class="cart" />
+          <div class="cart-notification">
+            <p class="cart-amount">0</p>
+          </div>
+          <img src="images/image-avatar.png" alt="profile image" class="user" />
+          <div class="cart-list">
+            <p>Cart</p>
+            <ul></ul>
+            <button class="cta checkout">Checkout</button>
+          </div>
+        </div>
+      </header>
+
+      <main class="product-container">
+        <div class="product-img">
+          <img
+            src="images/image-product-1.jpg"
+            alt="pair of sneakers"
+            class="product product-1"
+          />
+          <img
+            src="images/image-product-2.jpg"
+            alt="pair of sneakers"
+            class="product product-2"
+          />
+          <img
+            src="images/image-product-3.jpg"
+            alt="pair of sneakers"
+            class="product product-3"
+          />
+          <img
+            src="images/image-product-4.jpg"
+            alt="pair of sneakers"
+            class="product product-4"
+          />
+          <div class="carousel-ctrls">
+            <div class="previous carousel-ctrl">
+              <img src="images/icon-previous.svg" alt="see previous product" />
+            </div>
+            <div class="next carousel-ctrl">
+              <img src="images/icon-next.svg" alt="see next product" />
+            </div>
+          </div>
+          <div class="thumbnails">
+            <img
+              src="images/image-product-1-thumbnail.jpg"
+              alt=""
+              class="thumbnail thumbnail1"
+            />
+            <img
+              src="images/image-product-2-thumbnail.jpg"
+              alt=""
+              class="thumbnail thumbnail2"
+            />
+            <img
+              src="images/image-product-3-thumbnail.jpg"
+              alt=""
+              class="thumbnail thumbnail3"
+            />
+            <img
+              src="images/image-product-4-thumbnail.jpg"
+              alt=""
+              class="thumbnail thumbnail4"
+            />
+          </div>
+        </div>
+        <div class="lightbox">
+          <img src="images/icon-close.svg" alt="" class="close-lightbox" />
+          <img
+            src="images/image-product-1.jpg"
+            alt="pair of sneakers"
+            class="lightbox-content lightbox-content-1"
+          />
+          <img
+            src="images/image-product-2.jpg"
+            alt="pair of sneakers"
+            class="lightbox-content lightbox-content-2"
+          />
+          <img
+            src="images/image-product-3.jpg"
+            alt="pair of sneakers"
+            class="lightbox-content lightbox-content-3"
+          />
+          <img
+            src="images/image-product-4.jpg"
+            alt="pair of sneakers"
+            class="lightbox-content lightbox-content-4"
+          />
+          <div class="carousel-ctrls">
+            <div class="previous carousel-ctrl">
+              <img src="images/icon-previous.svg" alt="see previous product" />
+            </div>
+            <div class="next carousel-ctrl">
+              <img src="images/icon-next.svg" alt="see next product" />
+            </div>
+          </div>
+          <div class="lightbox-thumbnails">
+            <img
+              src="images/image-product-1-thumbnail.jpg"
+              alt=""
+              class="lightbox-thumbnail thumbnail1"
+            />
+            <img
+              src="images/image-product-2-thumbnail.jpg"
+              alt=""
+              class="lightbox-thumbnail thumbnail2"
+            />
+            <img
+              src="images/image-product-3-thumbnail.jpg"
+              alt=""
+              class="lightbox-thumbnail thumbnail3"
+            />
+            <img
+              src="images/image-product-4-thumbnail.jpg"
+              alt=""
+              class="lightbox-thumbnail thumbnail4"
+            />
+          </div>
+        </div>
+
+        <section class="product-desc">
+          <h3 class="maker">sneaker company</h3>
+          <h1>Fall limited edition sneakers</h1>
+          <p>
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they'll withsatand everything
+            the weather can offer.
+          </p>
+
+          <div class="price">
+            <div class="price-group-1">
+              <h1 class="current-price">$125.00</h1>
+              <h3 class="bonus">50%</h3>
+            </div>
+
+            <h3 class="previous-price price-group-2">$250.00</h3>
+          </div>
+
+          <div class="add-to-cart">
+            <div class="counter">
+              <img
+                src="images/icon-minus.svg"
+                alt="reduce amount of items purchased"
+                class="minus"
+              />
+              <p class="cart-size">0</p>
+              <img
+                src="images/icon-plus.svg"
+                alt="add to amount of items purchased"
+              />
+            </div>
+            <button class="cta">
+              <img
+                src="images/icon-cart - Copy.svg"
+                alt="cart"
+                class="cta-cart"
+              />
+              Add to cart
+            </button>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
