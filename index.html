@@ -45,11 +45,11 @@
             <p class="cart-amount">0</p>
           </div>
           <img src="images/image-avatar.png" alt="profile image" class="user" />
-          <div class="cart-list">
-            <p>Cart</p>
-            <ul></ul>
-            <button class="cta checkout">Checkout</button>
-          </div>
+        </div>
+
+        <div class="cart-list">
+          <p>Cart</p>
+          <p class="empty"> Your cart is empty.</p>
         </div>
       </header>
 
@@ -107,6 +107,7 @@
           </div>
         </div>
         <div class="lightbox">
+          <div class="lightbox-container">
           <img src="images/icon-close.svg" alt="" class="close-lightbox" />
           <img
             src="images/image-product-1.jpg"
@@ -129,10 +130,10 @@
             class="lightbox-content lightbox-content-4"
           />
           <div class="carousel-ctrls">
-            <div class="previous carousel-ctrl">
+            <div class="previous lightbox-ctrl carousel-ctrl">
               <img src="images/icon-previous.svg" alt="see previous product" />
             </div>
-            <div class="next carousel-ctrl">
+            <div class="next lightbox-ctrl carousel-ctrl">
               <img src="images/icon-next.svg" alt="see next product" />
             </div>
           </div>
@@ -158,11 +159,12 @@
               class="lightbox-thumbnail thumbnail4"
             />
           </div>
+          </div>
         </div>
 
         <section class="product-desc">
           <h3 class="maker">sneaker company</h3>
-          <h1>Fall limited edition sneakers</h1>
+          <h1 class="product-name">Fall limited edition sneakers</h1>
           <p>
             These low-profile sneakers are your perfect casual wear companion.
             Featuring a durable rubber outer sole, they'll withsatand everything
@@ -183,15 +185,16 @@
               <img
                 src="images/icon-minus.svg"
                 alt="reduce amount of items purchased"
-                class="minus"
+                class="count minus"
               />
               <p class="cart-size">0</p>
               <img
                 src="images/icon-plus.svg"
                 alt="add to amount of items purchased"
+                class="count plus"
               />
             </div>
-            <button class="cta">
+            <button class="cta cta-add-to-cart">
               <img
                 src="images/icon-cart - Copy.svg"
                 alt="cart"
