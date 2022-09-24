@@ -196,7 +196,15 @@ p {
   transform: translateX(0);
 }
 
-.
+.cart-list .empty {
+  border: none;
+  text-align: center;
+  display: none;
+}
+
+.empty.active {
+  display: block;
+}
 
 .cart-content {
   display: flex;
@@ -396,6 +404,7 @@ p {
   margin-right: 0.6em;
   width: 1.2em;
 }
+
 @media only screen and (min-width: 768px) {
   .thumbnails {
     display: flex;
@@ -421,7 +430,7 @@ p {
   }
   .add-to-cart {
     flex-direction: row;
-    width :100%;
+    width: 100%;
     justify-content: space-between;
   }
   .add-to-cart .cta {
@@ -463,7 +472,7 @@ p {
     padding: 0 1em;
     height: 100%;
   }
-  
+
   .navbar ul li a {
     font-size: 0.8em;
     transition: 0.5s ease-in-out;
@@ -488,7 +497,7 @@ p {
     display: grid;
     grid-template-columns: 50% 50%;
     width: 90%;
-    padding:0;
+    padding: 0;
     place-content: center;
     row-gap: 5%;
     height: 85%;
@@ -538,7 +547,7 @@ p {
     align-items: center;
     gap: 2em;
   }
-  .lightbox-container{
+  .lightbox-container {
     display: flex;
     gap: 2em;
     flex-direction: column;
@@ -548,7 +557,6 @@ p {
     width: 80%;
     margin: auto;
   }
-
 
   .thumbnail:hover,
   .lightbox-thumbnail:hover {
