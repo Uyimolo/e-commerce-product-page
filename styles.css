@@ -86,9 +86,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  overflow: hidden;
-
 }
+
 .header-group-1 {
   display: flex;
   gap: 1.5em;
@@ -133,8 +132,6 @@ body {
   background-color: var(--White);
   top: 0;
   left: 0;
-  
-
   padding: 25% 7%;
   transform: translateX(-100vw);
   z-index: 2;
