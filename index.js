@@ -19,7 +19,6 @@ curtain.addEventListener("click", () => {
 // create a global variable to serve as index pointing to product image
 let index = 1;
 
-//
 const setImage = (index, productClass) => {
   const product = document.querySelector(`.${productClass}-${index}`);
   const currentProduct = document.querySelector(
@@ -128,8 +127,6 @@ const cartList = document.querySelector(".cart-list");
 
 const addToCart = () => {
 
-  isEmpty();
-  
   multiplier += count;
   let calcPrice = currentPrice.slice(1, currentPrice.length) * multiplier;
   if (count > 0 && cartList.childNodes.length === 5) {
@@ -160,7 +157,10 @@ window.addEventListener("DOMContentLoaded", () => {
   document.querySelector(".empty").classList.add("active");
 })
 
-document.querySelector(".cta-add-to-cart").addEventListener("click", addToCart);
+document.querySelector(".cta-add-to-cart").addEventListener("click", () => {
+  addToCart();
+  isEmpty();
+});
 
 cartList.addEventListener("click", (e) => {
   const el = e.target;
@@ -176,11 +176,11 @@ cartList.addEventListener("click", (e) => {
 });
 
 const isEmpty = () => {
-  if(count > 0) {
-    document.querySelector(".empty").classList.remove("active");
+  if(cartList.childNodes.length <= 5) {
+    document.querySelector(".empty").classList.add("active");
   }
   else{
-    document.querySelector(".empty").classList.add("active");
+    document.querySelector(".empty").classList.remove("active");
   }
 }
 
