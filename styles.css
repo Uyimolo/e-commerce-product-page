@@ -86,7 +86,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  position:relative;
 }
 .header-group-1 {
   display: flex;
