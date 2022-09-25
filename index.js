@@ -32,7 +32,7 @@ const setImage = (index, productClass) => {
 
 window.addEventListener("DOMContentLoaded", setImage(index, "product"));
 
-// change image when carousel controls are clicked
+// change image when carousel controls are clicked 
 const counter = (e, productClass) => {
   const el = e.target;
   const products = document.querySelectorAll(`.${productClass}`);
