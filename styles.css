@@ -52,6 +52,10 @@ p {
   font-weight: 300;
   margin-bottom: 0.6em;
 }
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
 /* ................mobile version*/
 .container {
   width: 100%;
@@ -59,16 +63,17 @@ p {
   display: flex;
   flex-direction: column;
 }
+
 /* transparent black background when navbar is active*/
 .curtain {
   width: 100%;
   height: 100vh;
-  background-color: black;
-  z-index: 1;
-  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.87);
+  z-index: 2;
   transform: translateX(-100vw);
-  opacity: 0.75;
-  transition: 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);position: fixed;
 }
 
 .curtain.active {
@@ -81,7 +86,8 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
+  overflow: hidden;
+
 }
 .header-group-1 {
   display: flex;
@@ -121,12 +127,14 @@ p {
   transform: translateX(25%);
 }
 .navbar {
-  position: absolute;
-  width: 60%;
+  position: fixed;
+  width: 60vw;
   height: 100vh;
   background-color: var(--White);
   top: 0;
   left: 0;
+  
+
   padding: 25% 7%;
   transform: translateX(-100vw);
   z-index: 2;
@@ -243,6 +251,7 @@ p {
 .product-img {
   position: relative;
   z-index: 0;
+  overflow: hidden;
 }
 
 .product,
@@ -450,8 +459,9 @@ p {
   }
 
   h1 {
-    font-size: 1.8em;
+    font-size: 2em;
   }
+
   /* make navigation inline for desktop view*/
   .navbar {
     position: relative;
@@ -476,8 +486,23 @@ p {
   .navbar ul li a {
     font-size: 0.8em;
     transition: 0.5s ease-in-out;
+    position: relative;
   }
-  .navbar ul li a:hover {
+  .navbar ul li a::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 5px;
+    bottom: -2.4em;
+    left: 0;
+    background-color: var(--orange);
+    margin: 0 auto;
+    transition: 1s cubic-bezier(0.215, 0.610, 0.355, 1);
+  }
+  .navbar ul li a:hover::after{
+    width: 100%;
+  }
+  .navbr ul li a:hover {
     border-bottom: 4px solid var(--orange);
     padding-bottom: 1.9rem;
   }
@@ -487,10 +512,10 @@ p {
   }
 
   .container {
-    height: 100vh;
-    padding: 0 5%;
+    padding: 0 10%;
     display: flex;
     align-items: center;
+    gap: 4rem;
   }
 
   .product-container {
@@ -500,17 +525,18 @@ p {
     padding: 0;
     place-content: center;
     row-gap: 5%;
-    height: 85%;
+    gap: 5%;
   }
 
   .product-img {
-    width: 90%;
+    width: 100%;
     display: grid;
     gap: 1em;
+
   }
 
   .product {
-    width: 80%;
+    width: 90%;
     border-radius: 1em;
     margin: auto;
     cursor: pointer;
@@ -522,7 +548,7 @@ p {
 
   .thumbnails,
   .lightbox-thumbnails {
-    width: 80%;
+    width: 90%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -554,7 +580,7 @@ p {
   }
 
   .lightbox-thumbnails {
-    width: 80%;
+    width: 90%;
     margin: auto;
   }
 
@@ -571,8 +597,8 @@ p {
   }
 
   .product-desc {
-    width: 90%;
-    gap: 1.3rem;
+    width: 100%;
+    gap: 1rem;
     justify-content: center;
   }
 
@@ -606,15 +632,19 @@ p {
 
   .cta {
     width: 60%;
+    padding: .5em;
+  }
+
+  .cart-list {
+    top: 0;
   }
 }
 
-.cart-list {
-  top: 0;
-}
-
-@media only screen and (min-width: 1440px) {
-  h1 {
-    font-size: 2.5em;
+@media only screen and (min-width: 1100px) {
+  .product {
+    width: 80%;
+  }
+  .thumbnails{
+    width: 80%;
   }
 }
